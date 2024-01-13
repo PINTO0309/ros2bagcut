@@ -13,8 +13,8 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "pytz",
-    "rosbag2_py",
+    "pytz>=2022.1",
+    "rosbag2_py>=0.15.8",
 ]
 dynamic = ["version"]
 

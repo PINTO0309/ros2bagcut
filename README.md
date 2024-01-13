@@ -20,7 +20,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update
 sudo apt install -y ros-${DISTRO}-rosbag2
 ```
-## 2. Install ros2bagcug
+## 2. Install ros2bagcut
 ```bash
 pip install ros2bagcut
 ```

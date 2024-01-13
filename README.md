@@ -53,7 +53,8 @@ options:
     Cut start time and date, minute, second.
     If not specified, start from the beginning.
     e.g. --starttime {year} {mont} {day} {hour} {minute} {second}
-  -et ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME, --endtime ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME
+  -et ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME, \
+      --endtime ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME ENDTIME
     Cut end time and date, minute, second.
     If unspecified, to the end.
     e.g. --endtime {year} {mont} {day} {hour} {minute} {second}

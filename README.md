@@ -1,6 +1,8 @@
 # ros2bagcut
 A tool that simply cuts rosbag files within a specified start and end date and time.
 
+[![Downloads](https://static.pepy.tech/personalized-badge/ros2bagcut?period=total&units=none&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/ros2bagcut)
+
 ## 1. Install ROS2
 ```bash
 DISTRO=humble

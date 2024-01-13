@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools", "setuptools_scm", "requests"]
+requires = ["setuptools", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ros2bagcut"
 description = "A tool that simply cuts rosbag files within a specified start and end date and time."
-authors = [{name="Katsuya Hyodo", email="rmsdh122@yahoo.co.jp" }]
+authors = [{name="Katsuya Hyodo", email="rmsdh122@yahoo.co.jp"}]
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = [
@@ -13,7 +13,8 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "requests", "pytz", "rosbag2_py"
+    "pytz",
+    "rosbag2_py",
 ]
 dynamic = ["version"]
 
@@ -30,4 +31,4 @@ version = {attr = "ros2bagcut.version"}
 write_to = "ros2bagcut/_version.py"
 
 [project.scripts]
-tfliteiorewriter = "ros2bagcut.main:cli"
+ros2bagcut = "ros2bagcut.main:main"

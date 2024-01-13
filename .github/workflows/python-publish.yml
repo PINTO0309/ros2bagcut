@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+env:
+  DISTRO: humble
+
 jobs:
   pypi-deploy:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install build
-    - name: Install additional
+    - name: Build
       run: |
         pip install pytz
         sudo apt update && sudo apt install -y locales
@@ -30,10 +33,9 @@ jobs:
         sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         sudo apt update
-        sudo apt install -y ros-humble-rosbag2
+        sudo apt install -y ros-${{ env.DISTRO }}-rosbag2
+        source /opt/ros/${{ env.DISTRO }}/setup.bash
         pip install rosbag2_py
-    - name: Build
-      run: |
         python -m build
     - name: Publish a Python distribution to PyPI
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29

@@ -5,6 +5,13 @@ A tool that simply cuts rosbag files within a specified start and end date and t
 pip install ros2bagcut
 ```
 ```
+ros2bagcut \
+-i rosbag2_2024_01_12-09_37_34_0.db3 \
+-o rosbag2_2024_01_12-09_37_34_0_cut.db3 \
+-st 2024 1 12 18 37 55 \
+-tz Asia/Tokyo
+```
+```
 usage: ros2bagcut
 [-h]
 [-i INPUT_BAG_FILE]

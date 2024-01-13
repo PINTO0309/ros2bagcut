@@ -27,6 +27,25 @@ sudo apt install -y ros-${DISTRO}-rosbag2
 pip install ros2bagcut
 ```
 ## 3. Usage
+```bash
+ros2 bag info rosbag2_2024_01_12-09_37_34_0.db3 
+
+closing.
+
+closing.
+[INFO] [1705156035.868522147] [rosbag2_storage]: Opened database 'rosbag2_2024_01_12-09_37_34_0.db3' for READ_ONLY.
+
+Files:             rosbag2_2024_01_12-09_37_34_0.db3
+Bag size:          3.6 GiB
+Storage id:        sqlite3
+Duration:          71.9s
+Start:             Jan 12 2024 18:37:34.913 (1705052254.913)
+End:               Jan 12 2024 18:38:45.923 (1705052325.923)
+Messages:          4259
+Topic information: Topic: /zed2i/zed_node/depth/depth_registered | Type: sensor_msgs/msg/Image | Count: 1065 | Serialization Format: cdr
+                   Topic: /zed2i/zed_node/rgb/camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 2129 | Serialization Format: cdr
+                   Topic: /zed2i/zed_node/rgb_raw/image_raw_color | Type: sensor_msgs/msg/Image | Count: 1065 | Serialization Format: cdr
+```
 ```
 ros2bagcut \
 -i rosbag2_2024_01_12-09_37_34_0.db3 \

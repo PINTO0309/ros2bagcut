@@ -4,9 +4,6 @@ on:
   release:
     types: [published]
 
-env:
-  DISTRO: humble
-
 jobs:
   pypi-deploy:
     runs-on: ubuntu-latest
